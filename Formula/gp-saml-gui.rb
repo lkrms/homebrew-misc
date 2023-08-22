@@ -4,12 +4,19 @@ class GpSamlGui < Formula
   desc "Interactively authenticate to GlobalProtect VPNs that require SAML"
   homepage "https://github.com/dlenski/gp-saml-gui"
   url "https://github.com/lkrms/gp-saml-gui/archive/c17c2c8c113c89a90074a114207b90d56e3b42d5.tar.gz"
-  version "20230822"
+  version "20230823"
   sha256 "70bc7490cde5f202933e8a4b0f9734c3924fe8c613eb72995bd99fe45687017f"
   license "GPL-3.0-or-later"
   head "https://github.com/lkrms/gp-saml-gui.git", branch: "lkrms/pywebview"
 
+  depends_on "gobject-introspection" => :build
+  depends_on "py3cairo" => :build
+  depends_on "pygobject3" => :build
+  depends_on "cairo"
+  depends_on "gtk+3"
+  depends_on "openconnect"
   depends_on "python@3.11"
+  depends_on "vpn-slice" => :optional
 
   # To update:
   #
