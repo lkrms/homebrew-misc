@@ -1,8 +1,8 @@
 class PrettyPhp < Formula
   desc "Opinionated PHP code formatter"
   homepage "https://github.com/lkrms/pretty-php"
-  url "https://github.com/lkrms/pretty-php/releases/download/v0.4.41/pretty-php.phar"
-  sha256 "8346378d6a9233461f6e430af50a6a28b62e76ff9874e21679eab8c34449c84a"
+  url "https://github.com/lkrms/pretty-php/releases/download/v0.4.42/pretty-php.phar"
+  sha256 "ef359aceb7a7e57bfde3ae293d7bc372b89f2609ec205e47e9458de0464bd33a"
   license "MIT"
 
   depends_on "pandoc" => :build
