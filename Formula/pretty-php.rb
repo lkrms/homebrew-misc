@@ -17,6 +17,6 @@ class PrettyPhp < Formula
   end
 
   test do
-    assert_match "pretty-php v#{version}-", shell_output("#{bin}/pretty-php --version").strip
+    assert_match "pretty-php v#{version} \\(", shell_output("#{bin}/pretty-php --version").strip
   end
 end
