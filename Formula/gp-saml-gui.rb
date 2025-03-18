@@ -91,7 +91,9 @@ class GpSamlGui < Formula
   end
 
   def install
-    ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version if OS.mac?
+    # Work around "error: 'CGWindowListCreateImageFromArray' is unavailable:
+    # obsoleted in macOS 15.0 - Please use ScreenCaptureKit instead."
+    ENV["MACOSX_DEPLOYMENT_TARGET"] = "14.0" if OS.mac? && MacOS.version >= :sequoia
     virtualenv_install_with_resources
   end
 
